@@ -1,0 +1,19 @@
+methods:{
+    guardarUsuario(){
+      // console.log(this.documento);
+      const endpoint="http//localhost:8080/usuario/guardar"
+      const opciones={
+      method:"POST",
+      headers:{'content-Type':"application/json"},
+      body:JSON.stringify({
+        documento:this.documento,
+        nombres:this.nombres,
+        apellidos:this.apellidos,
+        telefono:this.telefono,
+        correo:this.correo,
+        edad:this.edad
+      })
+    };
+    fetch(endpoint,opciones).then(async response=>{
+        alert("usuario Guardado")
+    })
