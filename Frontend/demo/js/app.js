@@ -1,0 +1,60 @@
+const app= Vue.createApp({
+    data(){
+        return{
+            bienvenida:"Saludo a los Tripulantes mision TIC 2022 UNAB!",
+            edad:0,
+            id:0,
+            nombre:"",
+            apellido:"",
+            correo:"",
+            nombreNav:"",
+            navegadores:["Firefox"],
+            usuarios:[
+                {
+                    id:1,
+                    nombre:"octavio",
+                    apellido:"ramirez",
+                    correo:"octavio4452@gmail.com"
+                },
+                {
+                    id:2,
+                    nombre:"JUAN",
+                    apellido:"ramirez",
+                    correo:"octavio4452@gmail.com"
+                },
+                {
+                    id:3,
+                    nombre:"maria",
+                    apellido:"ramirez",
+                    correo:"octavio4452@gmail.com"
+                }]
+        }
+    },
+    //metodos propios
+    methods:{        
+        incrementar(){
+            this.edad=this.edad+1;
+        },
+        decrementar(){
+            this.edad=this.edad-1;
+        },
+        actualizarNavegador(){
+            this.navegadores.push(this.nombreNav);
+            this.nombreNav="";
+        },
+        agregarUsuario(){
+            this.usuarios.push({
+                id:this.id,
+                nombre:this.nombre,
+                apellido:this.apellido,
+                correo:this.correo
+            })
+            this.id="";
+            this.nombre="";
+            this.apellido="";
+            this.correo="";
+        }
+    }
+        
+});
+app.mount("#app")
