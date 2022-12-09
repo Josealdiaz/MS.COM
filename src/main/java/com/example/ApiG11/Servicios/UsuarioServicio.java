@@ -28,11 +28,14 @@ public class UsuarioServicio {
     public Boolean eliminarUsuario(Long documento){
         if(repositorio.existsById(documento)){
             repositorio.deleteById(documento);
-        }
+        
         return true;
-        else {
+        }
+        else{
             return false;
         }
     }
-    
+    public ArrayList<UsuarioModelo> buscarXcorreo(String correo){
+        return repositorio.findByCorreo(correo);
+    }
 }
