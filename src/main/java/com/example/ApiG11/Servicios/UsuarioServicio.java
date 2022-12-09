@@ -25,5 +25,14 @@ public class UsuarioServicio {
     public Optional<UsuarioModelo> consultaDocumento(Long documento){
         return repositorio.findById(documento);
     }
+    public Boolean eliminarUsuario(Long documento){
+        if(repositorio.existsById(documento)){
+            repositorio.deleteById(documento);
+        }
+        return true;
+        else {
+            return false;
+        }
+    }
     
 }
