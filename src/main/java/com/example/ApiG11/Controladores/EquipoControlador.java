@@ -1,6 +1,7 @@
 package com.example.ApiG11.Controladores;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,6 +12,7 @@ import com.example.ApiG11.Servicios.EquipoServicio;
 
 @RestController
 @RequestMapping("/equipo")
+@CrossOrigin("*")
 public class EquipoControlador {
     @Autowired
     EquipoServicio servicio;

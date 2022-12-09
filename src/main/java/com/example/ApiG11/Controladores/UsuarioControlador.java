@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,6 +18,7 @@ import com.example.ApiG11.Servicios.UsuarioServicio;
 @RestController
 //http://localhost:8080/usuario
 @RequestMapping("/usuario")
+@CrossOrigin("*")
 public class UsuarioControlador {
 
     @Autowired
